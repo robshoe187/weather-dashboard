@@ -9,7 +9,6 @@ var windEl = document.querySelector("#wind")
 var uvEl = document.querySelector("#uv")
 var fiveDayForecastEl = document.querySelector("#fiveDayForecast")
 var weatherIconEl = document.querySelector("#weatherIcon")
-var key = "9e35ef55fdd150a55bb7c4b8b31b4d48"
 var cityStr = localStorage.getItem("city")
 if (cityStr == null) {
     var cityHist = []
@@ -45,7 +44,7 @@ var searchHistory = function() {
 //get location data from openweather map API
 function getAPIData(search) {
 
-    var apiUrl = "http://api.openweathermap.org/geo/1.0/direct?q="+ search +"&limit=1&appid=" + key
+    var apiUrl = "http://api.openweathermap.org/geo/1.0/direct?q="+ search +"&limit=1&appid=9e35ef55fdd150a55bb7c4b8b31b4d48"
 
     fetch(apiUrl)
     .then(function(response) {
@@ -65,7 +64,7 @@ function getAPIData(search) {
 
 //get weather data from openweather
 function getWeatherData(lat, lon, search) {
-    var weatherUrl = "https://api.openweathermap.org/data/2.5/onecall?lat="+lat+"&lon="+lon+"&units=imperial&appid="+key
+    var weatherUrl = "https://api.openweathermap.org/data/2.5/onecall?lat="+lat+"&lon="+lon+"&units=imperial&appid=9e35ef55fdd150a55bb7c4b8b31b4d48"
     fetch(weatherUrl)
     .then(function(weather) {
         // request was successful
