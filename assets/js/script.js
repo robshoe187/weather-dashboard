@@ -44,7 +44,7 @@ var searchHistory = function() {
 //get location data from openweather map API
 function getAPIData(search) {
 
-    var apiUrl = "http://api.openweathermap.org/geo/1.0/direct?q="+ search +"&limit=1&appid=9e35ef55fdd150a55bb7c4b8b31b4d48"
+    var apiUrl = "https://api.openweathermap.org/geo/1.0/direct?q="+ search +"&limit=1&appid=9e35ef55fdd150a55bb7c4b8b31b4d48"
 
     fetch(apiUrl)
     .then(function(response) {
